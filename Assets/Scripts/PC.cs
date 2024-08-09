@@ -23,5 +23,10 @@ public class PC : MonoBehaviour
     public void Die()
     {
         gameObject.SetActive(false);
+        GameManager gm = FindObjectOfType<GameManager>();
+        if (gm != null)
+        {
+            gm.EndGame();
+        }
     }
 }
